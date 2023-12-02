@@ -59,7 +59,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="data"> Defender for Storage Settings. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="data"/> is null. </exception>
-        public virtual async Task<ArmOperation<DefenderForStorageSettingResource>> CreateOrUpdateAsync(WaitUntil waitUntil, SecuritySettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
+        public virtual async Task<ArmOperation<DefenderForStorageSettingResource>> CreateOrUpdateAsync(WaitUntil waitUntil, DefenderForStorageSettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(data, nameof(data));
 
@@ -98,7 +98,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="data"> Defender for Storage Settings. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="data"/> is null. </exception>
-        public virtual ArmOperation<DefenderForStorageSettingResource> CreateOrUpdate(WaitUntil waitUntil, SecuritySettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
+        public virtual ArmOperation<DefenderForStorageSettingResource> CreateOrUpdate(WaitUntil waitUntil, DefenderForStorageSettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(data, nameof(data));
 
@@ -134,7 +134,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<DefenderForStorageSettingResource>> GetAsync(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<DefenderForStorageSettingResource>> GetAsync(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.Get");
             scope.Start();
@@ -167,7 +167,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<DefenderForStorageSettingResource> Get(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual Response<DefenderForStorageSettingResource> Get(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.Get");
             scope.Start();
@@ -200,7 +200,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<Response<bool>> ExistsAsync(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<bool>> ExistsAsync(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.Exists");
             scope.Start();
@@ -231,7 +231,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual Response<bool> Exists(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual Response<bool> Exists(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.Exists");
             scope.Start();
@@ -262,7 +262,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual async Task<NullableResponse<DefenderForStorageSettingResource>> GetIfExistsAsync(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual async Task<NullableResponse<DefenderForStorageSettingResource>> GetIfExistsAsync(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.GetIfExists");
             scope.Start();
@@ -295,7 +295,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// </summary>
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
-        public virtual NullableResponse<DefenderForStorageSettingResource> GetIfExists(SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual NullableResponse<DefenderForStorageSettingResource> GetIfExists(DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             using var scope = _defenderForStorageSettingDefenderForStorageClientDiagnostics.CreateScope("DefenderForStorageSettingCollection.GetIfExists");
             scope.Start();

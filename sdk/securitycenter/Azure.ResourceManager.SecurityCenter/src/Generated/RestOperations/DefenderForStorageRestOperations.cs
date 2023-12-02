@@ -37,7 +37,7 @@ namespace Azure.ResourceManager.SecurityCenter
             _userAgent = new TelemetryDetails(GetType().Assembly, applicationId);
         }
 
-        internal HttpMessage CreateGetRequest(string resourceId, SecuritySettingName settingName)
+        internal HttpMessage CreateGetRequest(string resourceId, DefenderForStorageSettingName settingName)
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
@@ -60,7 +60,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="resourceId"/> is null. </exception>
-        public async Task<Response<DefenderForStorageSettingData>> GetAsync(string resourceId, SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public async Task<Response<DefenderForStorageSettingData>> GetAsync(string resourceId, DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(resourceId, nameof(resourceId));
 
@@ -87,7 +87,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="resourceId"/> is null. </exception>
-        public Response<DefenderForStorageSettingData> Get(string resourceId, SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public Response<DefenderForStorageSettingData> Get(string resourceId, DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(resourceId, nameof(resourceId));
 
@@ -109,7 +109,7 @@ namespace Azure.ResourceManager.SecurityCenter
             }
         }
 
-        internal HttpMessage CreateCreateRequest(string resourceId, SecuritySettingName settingName, DefenderForStorageSettingData data)
+        internal HttpMessage CreateCreateRequest(string resourceId, DefenderForStorageSettingName settingName, DefenderForStorageSettingData data)
         {
             var message = _pipeline.CreateMessage();
             var request = message.Request;
@@ -137,7 +137,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="data"> Defender for Storage Settings. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="resourceId"/> or <paramref name="data"/> is null. </exception>
-        public async Task<Response<DefenderForStorageSettingData>> CreateAsync(string resourceId, SecuritySettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
+        public async Task<Response<DefenderForStorageSettingData>> CreateAsync(string resourceId, DefenderForStorageSettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(resourceId, nameof(resourceId));
             Argument.AssertNotNull(data, nameof(data));
@@ -165,7 +165,7 @@ namespace Azure.ResourceManager.SecurityCenter
         /// <param name="data"> Defender for Storage Settings. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         /// <exception cref="ArgumentNullException"> <paramref name="resourceId"/> or <paramref name="data"/> is null. </exception>
-        public Response<DefenderForStorageSettingData> Create(string resourceId, SecuritySettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
+        public Response<DefenderForStorageSettingData> Create(string resourceId, DefenderForStorageSettingName settingName, DefenderForStorageSettingData data, CancellationToken cancellationToken = default)
         {
             Argument.AssertNotNull(resourceId, nameof(resourceId));
             Argument.AssertNotNull(data, nameof(data));

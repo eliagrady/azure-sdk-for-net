@@ -40,7 +40,7 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             DefenderForStorageSettingCollection collection = client.GetDefenderForStorageSettings(scopeId);
 
             // invoke the operation
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             DefenderForStorageSettingResource result = await collection.GetAsync(settingName);
 
             // the variable result is a resource, you could call other operations on this instance as well
@@ -72,7 +72,7 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             DefenderForStorageSettingCollection collection = client.GetDefenderForStorageSettings(scopeId);
 
             // invoke the operation
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             bool result = await collection.ExistsAsync(settingName);
 
             Console.WriteLine($"Succeeded: {result}");
@@ -100,7 +100,7 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             DefenderForStorageSettingCollection collection = client.GetDefenderForStorageSettings(scopeId);
 
             // invoke the operation
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             NullableResponse<DefenderForStorageSettingResource> response = await collection.GetIfExistsAsync(settingName);
             DefenderForStorageSettingResource result = response.HasValue ? response.Value : null;
 
@@ -140,7 +140,7 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             DefenderForStorageSettingCollection collection = client.GetDefenderForStorageSettings(scopeId);
 
             // invoke the operation
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             DefenderForStorageSettingData data = new DefenderForStorageSettingData()
             {
                 IsEnabledPropertiesIsEnabled = true,

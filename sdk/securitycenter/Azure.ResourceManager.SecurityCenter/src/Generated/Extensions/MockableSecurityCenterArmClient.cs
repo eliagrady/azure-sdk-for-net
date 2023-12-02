@@ -194,7 +194,7 @@ namespace Azure.ResourceManager.SecurityCenter.Mocking
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         [ForwardsClientCalls]
-        public virtual async Task<Response<DefenderForStorageSettingResource>> GetDefenderForStorageSettingAsync(ResourceIdentifier scope, SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual async Task<Response<DefenderForStorageSettingResource>> GetDefenderForStorageSettingAsync(ResourceIdentifier scope, DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             return await GetDefenderForStorageSettings(scope).GetAsync(settingName, cancellationToken).ConfigureAwait(false);
         }
@@ -216,7 +216,7 @@ namespace Azure.ResourceManager.SecurityCenter.Mocking
         /// <param name="settingName"> Defender for Storage setting name. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
         [ForwardsClientCalls]
-        public virtual Response<DefenderForStorageSettingResource> GetDefenderForStorageSetting(ResourceIdentifier scope, SecuritySettingName settingName, CancellationToken cancellationToken = default)
+        public virtual Response<DefenderForStorageSettingResource> GetDefenderForStorageSetting(ResourceIdentifier scope, DefenderForStorageSettingName settingName, CancellationToken cancellationToken = default)
         {
             return GetDefenderForStorageSettings(scope).Get(settingName, cancellationToken);
         }

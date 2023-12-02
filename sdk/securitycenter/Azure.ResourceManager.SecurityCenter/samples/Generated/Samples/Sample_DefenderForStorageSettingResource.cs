@@ -34,12 +34,12 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             // this example assumes you already have this DefenderForStorageSettingResource created on azure
             // for more information of creating DefenderForStorageSettingResource, please refer to the document of DefenderForStorageSettingResource
             string resourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount";
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             ResourceIdentifier defenderForStorageSettingResourceId = DefenderForStorageSettingResource.CreateResourceIdentifier(resourceId, settingName);
             DefenderForStorageSettingResource defenderForStorageSetting = client.GetDefenderForStorageSettingResource(defenderForStorageSettingResourceId);
 
             // invoke the operation
-            SecuritySettingName settingName0 = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName0 = DefenderForStorageSettingName.Current;
             DefenderForStorageSettingResource result = await defenderForStorageSetting.GetAsync(settingName0);
 
             // the variable result is a resource, you could call other operations on this instance as well
@@ -65,12 +65,12 @@ namespace Azure.ResourceManager.SecurityCenter.Samples
             // this example assumes you already have this DefenderForStorageSettingResource created on azure
             // for more information of creating DefenderForStorageSettingResource, please refer to the document of DefenderForStorageSettingResource
             string resourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount";
-            SecuritySettingName settingName = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName = DefenderForStorageSettingName.Current;
             ResourceIdentifier defenderForStorageSettingResourceId = DefenderForStorageSettingResource.CreateResourceIdentifier(resourceId, settingName);
             DefenderForStorageSettingResource defenderForStorageSetting = client.GetDefenderForStorageSettingResource(defenderForStorageSettingResourceId);
 
             // invoke the operation
-            SecuritySettingName settingName0 = SecuritySettingName.Current;
+            DefenderForStorageSettingName settingName0 = DefenderForStorageSettingName.Current;
             DefenderForStorageSettingData data = new DefenderForStorageSettingData()
             {
                 IsEnabledPropertiesIsEnabled = true,

@@ -22,10 +22,22 @@ namespace Azure.ResourceManager.SecurityCenter.Models
             _value = value ?? throw new ArgumentNullException(nameof(value));
         }
 
-        private const string CurrentValue = "current";
+        private const string McasValue = "MCAS";
+        private const string WdatpValue = "WDATP";
+        private const string WdatpExcludeLinuxPublicPreviewValue = "WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW";
+        private const string WdatpUnifiedSolutionValue = "WDATP_UNIFIED_SOLUTION";
+        private const string SentinelValue = "Sentinel";
 
-        /// <summary> Name of the Defender for Storage Settings name. </summary>
-        public static SecuritySettingName Current { get; } = new SecuritySettingName(CurrentValue);
+        /// <summary> MCAS. </summary>
+        public static SecuritySettingName Mcas { get; } = new SecuritySettingName(McasValue);
+        /// <summary> WDATP. </summary>
+        public static SecuritySettingName Wdatp { get; } = new SecuritySettingName(WdatpValue);
+        /// <summary> WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW. </summary>
+        public static SecuritySettingName WdatpExcludeLinuxPublicPreview { get; } = new SecuritySettingName(WdatpExcludeLinuxPublicPreviewValue);
+        /// <summary> WDATP_UNIFIED_SOLUTION. </summary>
+        public static SecuritySettingName WdatpUnifiedSolution { get; } = new SecuritySettingName(WdatpUnifiedSolutionValue);
+        /// <summary> Sentinel. </summary>
+        public static SecuritySettingName Sentinel { get; } = new SecuritySettingName(SentinelValue);
         /// <summary> Determines if two <see cref="SecuritySettingName"/> values are the same. </summary>
         public static bool operator ==(SecuritySettingName left, SecuritySettingName right) => left.Equals(right);
         /// <summary> Determines if two <see cref="SecuritySettingName"/> values are not the same. </summary>
